@@ -14,20 +14,24 @@
 #define LED_YELLOW_BLINK_DURATION   5000    //경고등 점멸 시간(5sec)
 #define BLINK_TIME                  5       //점멸 횟수
 #define TRAFFIC_LIGHT_IDLE_TIME     3000    //입력 받았을 시 대기 시간(3sec)
-
+           
 //기능 : 주행할 수 있게 신호를 조정합니다.
 void Drive(const int red, const int green, const int yellow, const int otherRed);
+
 //기능 : duration 동안 pin을 킵니다
 void TurnOnLEDWithinTime(const int pin, const int duration);
+
 //기능 : duration동안 pin을 blinkTime번 점멸시킵니다
 void BlinkLED(const int pin, const int duration, const int blinkTime);
+
 //기능 : 보행자가 건널 수 있게 신호등을 조정합니다.
 void AdjustTrafficLight();
+
 //기능 : AdjustTrafficLight() 보조 함수
 void doAdjust(const int red, const int green, const int yellow);
+
 //기능 : duration동안 보행자 버튼으로부터 신호를 받습니다.
 void Polling(const int duration);
-
 
 void setup()
 {
