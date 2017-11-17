@@ -4,7 +4,7 @@
   #include <avr/power.h>
 #endif
 
-#define PIN            6
+#define PIN            5
 #define NUMPIXELS      16
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
@@ -22,7 +22,7 @@ void loop()
 {
   for(int i=0;i<NUMPIXELS;i++)
   {
-    pixels.setPixelColor(i, pixels.Color(0,150,0));
+    pixels.setPixelColor(i, pixels.Color(0,0,150));
     pixels.show();
     delay(delayval);
   }
