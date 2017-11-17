@@ -1,6 +1,6 @@
-const int PIN_RED = 11;
-const int PIN_BLUE = 10;
-const int PIN_GREEN = 9;
+const int PIN_RED = 2;
+const int PIN_BLUE = 4;
+const int PIN_GREEN = 3;
 
 int val;
 
@@ -32,19 +32,19 @@ void loop()
 //    delay(1);
 //  }
 
-  analogWrite(PIN_RED, 255);
-  analogWrite(PIN_BLUE, 0);
-  analogWrite(PIN_GREEN, 0);
-  delay(2000);
-
-  analogWrite(PIN_RED, 0);
-  analogWrite(PIN_BLUE, 255);
-  analogWrite(PIN_GREEN, 0);
-  delay(2000);
-
   analogWrite(PIN_RED, 0);
   analogWrite(PIN_BLUE, 0);
   analogWrite(PIN_GREEN, 255);
+  delay(2000);
+
+  analogWrite(PIN_RED, 255);
+  analogWrite(PIN_BLUE, 0);
+  analogWrite(PIN_GREEN, 255);
+  delay(2000);
+
+  analogWrite(PIN_RED, 255);
+  analogWrite(PIN_BLUE, 0);
+  analogWrite(PIN_GREEN, 0);
   delay(2000);
 
   Serial.println(val, DEC);
