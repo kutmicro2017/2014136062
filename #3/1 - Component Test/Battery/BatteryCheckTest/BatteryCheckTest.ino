@@ -17,15 +17,6 @@ const int segF = 4;                     //Pin 9
 const int segG = 2;                     //Pin 7
 const int segDP= 12;                    //Pin 5
 const int numberOfDigits = 4;
-//
-#include <Adafruit_NeoPixel.h>
-#ifdef __AVR__
-  #include <avr/power.h>
-#endif
-
-#define PIN            A5
-#define NUMPIXELS      16
-Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 void checkBattery();
 void set7Seg(int val);
@@ -58,10 +49,5 @@ void set7Seg(int val)
   char str[10];
   sprintf(str, "%4d", val);
   g_7seg.DisplayString(str, 0);
-  for(int i=0;i<NUMPIXELS;i++)
-  {
-    pixels.setPixelColor(i, pixels.Color(0,150,0));
-    pixels.show();
-  }
 }
 
